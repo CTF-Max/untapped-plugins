@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "untapped-site-audit": {
+      "command": "python",
+      "args": [
+        "server/audit_server.py"
+      ],
+      "cwd": ".",
+      "env_vars": [
+        "PATH",
+        "SYSTEMROOT",
+        "LOCALAPPDATA",
+        "HOME",
+        "USERPROFILE",
+        "UNTAPPED_AUDIT_ALLOW_PRIVATE"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.CTF-Max/untapped-site-audit",
+  "title": "Untapped Site Audit",
+  "description": "Audit a site in the order that finds the bottleneck",
+  "version": "0.2.0",
+  "websiteUrl": "https://github.com/CTF-Max/untapped-plugins/tree/main/untapped-site-audit#readme",
+  "repository": {
+    "url": "https://github.com/CTF-Max/untapped-plugins",
+    "source": "github",
+    "subfolder": "untapped-site-audit"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/CTF-Max/untapped-plugins/releases/download/v0.2.0/untapped-site-audit-mcp-0.2.0.mcpb",
+      "version": "0.2.0",
+      "fileSha256": "9f506c729e869ba4e08882dadc6e567c50af804e106782a29f5125a6087475f2",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

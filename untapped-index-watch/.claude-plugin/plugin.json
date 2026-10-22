@@ -1,0 +1,46 @@
+{
+  "name": "untapped-index-watch",
+  "displayName": "Untapped Index Watch",
+  "version": "0.2.0",
+  "description": "Checks every sitemap URL against Search Console's URL Inspection, says what each problem usually means and what to do, and shows what changed since the last check. Free.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "google",
+    "search console",
+    "indexing",
+    "index coverage",
+    "sitemap",
+    "website health"
+  ],
+  "icon": "./assets/untapped-index-watch.svg",
+  "documentationUrl": "https://github.com/CTF-Max/untapped-plugins/tree/main/untapped-index-watch#readme",
+  "supportUrl": "https://github.com/CTF-Max/untapped-plugins/issues",
+  "privacyPolicyUrl": "https://github.com/CTF-Max/untapped-plugins/blob/main/untapped-index-watch/PRIVACY.md",
+  "mcpServers": {
+    "untapped-index-watch": {
+      "command": "python",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/server/index_server.py"
+      ],
+      "env": {
+        "UNTAPPED_GOOGLE_CLIENT_SECRET": "${UNTAPPED_GOOGLE_CLIENT_SECRET}",
+        "UNTAPPED_GOOGLE_HOME": "${UNTAPPED_GOOGLE_HOME}",
+        "UNTAPPED_INDEX_HOME": "${UNTAPPED_INDEX_HOME}",
+        "UNTAPPED_GOOGLE_CLIENT_JSON": "${user_config.google_client_json}"
+      }
+    }
+  },
+  "userConfig": {
+    "google_client_json": {
+      "type": "file",
+      "title": "Google OAuth client file",
+      "description": "The Desktop-app OAuth client JSON you downloaded from Google Cloud console (APIs & Services → Credentials). Shared by every Untapped Google plugin. Leave empty if you set UNTAPPED_GOOGLE_CLIENT_SECRET instead."
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "untapped-site-audit",
+  "displayName": "Untapped Site Audit",
+  "version": "0.2.0",
+  "description": "A guided live-site audit (indexed, seen, buyer phrases, on-page targeting, visitors, buyers) plus free on-page checks across a sitemap: titles, H1s, canonicals, noindex, schema, thin pages, duplicates.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "website audit",
+    "site audit",
+    "google",
+    "local search",
+    "on-page checks",
+    "sitemap"
+  ],
+  "icon": "./assets/untapped-site-audit.svg",
+  "documentationUrl": "https://github.com/CTF-Max/untapped-plugins/tree/main/untapped-site-audit#readme",
+  "supportUrl": "https://github.com/CTF-Max/untapped-plugins/issues",
+  "privacyPolicyUrl": "https://github.com/CTF-Max/untapped-plugins/blob/main/untapped-site-audit/PRIVACY.md",
+  "mcpServers": {
+    "untapped-site-audit": {
+      "command": "python",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/server/audit_server.py"
+      ],
+      "env": {
+        "UNTAPPED_AUDIT_ALLOW_PRIVATE": "${UNTAPPED_AUDIT_ALLOW_PRIVATE}"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "untapped-search-console": {
+      "command": "python",
+      "args": [
+        "server/gsc_server.py"
+      ],
+      "cwd": ".",
+      "env_vars": [
+        "PATH",
+        "SYSTEMROOT",
+        "LOCALAPPDATA",
+        "HOME",
+        "USERPROFILE",
+        "UNTAPPED_GOOGLE_CLIENT_SECRET",
+        "UNTAPPED_GOOGLE_HOME"
+      ]
+    }
+  }
+}

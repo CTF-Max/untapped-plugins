@@ -1,0 +1,61 @@
+{
+  "name": "untapped-serp",
+  "displayName": "Untapped SERP",
+  "version": "0.2.0",
+  "description": "Live Google results and search volume for your agent, through your own DataForSEO account, with a daily spend cap.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "google",
+    "search results",
+    "rank tracking",
+    "search volume",
+    "keyword research",
+    "local search"
+  ],
+  "icon": "./assets/untapped-serp.svg",
+  "documentationUrl": "https://github.com/CTF-Max/untapped-plugins/tree/main/untapped-serp#readme",
+  "supportUrl": "https://github.com/CTF-Max/untapped-plugins/issues",
+  "privacyPolicyUrl": "https://github.com/CTF-Max/untapped-plugins/blob/main/untapped-serp/PRIVACY.md",
+  "mcpServers": {
+    "untapped-serp": {
+      "command": "python",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/server/serp_server.py"
+      ],
+      "env": {
+        "UNTAPPED_DATAFORSEO_LOGIN": "${user_config.dataforseo_login}",
+        "UNTAPPED_DATAFORSEO_PASSWORD": "${user_config.dataforseo_password}",
+        "UNTAPPED_SERP_DAILY_CAP_USD": "${user_config.daily_cap_usd}",
+        "UNTAPPED_SERP_SANDBOX": "${UNTAPPED_SERP_SANDBOX}",
+        "UNTAPPED_SERP_HOME": "${UNTAPPED_SERP_HOME}"
+      }
+    }
+  },
+  "userConfig": {
+    "dataforseo_login": {
+      "type": "string",
+      "title": "DataForSEO API login",
+      "sensitive": true,
+      "description": "From the DataForSEO dashboard → API Access."
+    },
+    "dataforseo_password": {
+      "type": "string",
+      "title": "DataForSEO API password",
+      "sensitive": true,
+      "description": "From the DataForSEO dashboard → API Access."
+    },
+    "daily_cap_usd": {
+      "type": "number",
+      "title": "Daily spend cap (US dollars)",
+      "default": 1,
+      "min": 0,
+      "description": "Paid calls stop once today's spend would pass this."
+    }
+  }
+}

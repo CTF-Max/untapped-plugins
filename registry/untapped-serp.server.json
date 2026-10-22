@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.CTF-Max/untapped-serp",
+  "title": "Untapped SERP",
+  "description": "Real Google results and search volume",
+  "version": "0.2.0",
+  "websiteUrl": "https://github.com/CTF-Max/untapped-plugins/tree/main/untapped-serp#readme",
+  "repository": {
+    "url": "https://github.com/CTF-Max/untapped-plugins",
+    "source": "github",
+    "subfolder": "untapped-serp"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/CTF-Max/untapped-plugins/releases/download/v0.2.0/untapped-serp-mcp-0.2.0.mcpb",
+      "version": "0.2.0",
+      "fileSha256": "39d0d111658c04d0219e4fa3a29cda514a33f8cce6926d7bf42d8f684880d658",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

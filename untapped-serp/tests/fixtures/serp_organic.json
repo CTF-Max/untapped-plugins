@@ -1,0 +1,62 @@
+{
+  "version": "0.1.20261001",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.1 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "10091800-1111-0066-0000-000000000001",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.0 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "organic", "live", "advanced"],
+      "data": {"api": "serp", "function": "live", "se": "google", "se_type": "organic", "keyword": "nail salon near me",
+               "location_name": "Palm Coast,Florida,United States", "language_code": "en", "device": "desktop", "depth": 10},
+      "result": [
+        {
+          "keyword": "nail salon near me",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 1015116,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=nail+salon+near+me&num=100&hl=en&gl=US",
+          "datetime": "2026-10-09 18:00:00 +00:00",
+          "spell": null,
+          "item_types": ["ai_overview", "local_pack", "organic", "people_also_ask", "featured_snippet"],
+          "se_results_count": 1230000,
+          "items_count": 7,
+          "items": [
+            {"type": "ai_overview", "rank_group": 1, "rank_absolute": 1, "position": "left",
+             "items": [{"type": "ai_overview_element", "title": null, "text": "Several salons in Palm Coast...",
+                        "references": [{"type": "ai_overview_reference", "source": "NY Nails", "domain": "nynailsspabunnel.com",
+                                        "url": "https://nynailsspabunnel.com/", "title": "NY Nails Spa"},
+                                       {"type": "ai_overview_reference", "source": "Yelp", "domain": "www.yelp.com",
+                                        "url": "https://www.yelp.com/search?find_desc=nail+salon", "title": "Best nail salons"}]}]},
+            {"type": "local_pack", "rank_group": 1, "rank_absolute": 2, "position": "left", "title": "NY Nails Spa",
+             "description": "Nail salon", "domain": "nynailsspabunnel.com", "phone": "+1-386-000-0000",
+             "url": "https://nynailsspabunnel.com/", "is_paid": false,
+             "rating": {"rating_type": "Max5", "value": 4.8, "votes_count": 120, "rating_max": 5}},
+            {"type": "local_pack", "rank_group": 2, "rank_absolute": 3, "position": "left", "title": "Other Nails",
+             "domain": null, "url": null, "is_paid": false, "rating": null},
+            {"type": "organic", "rank_group": 1, "rank_absolute": 4, "position": "left", "domain": "www.example.com",
+             "title": "Example nails", "url": "https://www.example.com/nails", "description": "A description that is fine."},
+            {"type": "people_also_ask", "rank_group": 1, "rank_absolute": 5, "position": "left",
+             "items": [{"type": "people_also_ask_element", "title": "How much is a manicure in Palm Coast?",
+                        "expanded_element": [{"type": "people_also_ask_expanded_element", "url": "https://foo.com/prices",
+                                              "domain": "foo.com", "title": "Prices"}]},
+                       {"type": "people_also_ask_element", "title": "Do nail salons take walk-ins?", "expanded_element": null}]},
+            {"type": "featured_snippet", "rank_group": 1, "rank_absolute": 6, "position": "left",
+             "domain": "wiki.example.org", "url": "https://wiki.example.org/manicure", "title": "Manicure"},
+            {"type": "organic", "rank_group": 2, "rank_absolute": 7, "position": "left", "domain": "book.nynailsspabunnel.com",
+             "title": "Book NY Nails", "url": "https://book.nynailsspabunnel.com/", "description": "Book online."}
+          ]
+        }
+      ]
+    }
+  ]
+}

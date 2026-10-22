@@ -1,0 +1,42 @@
+{
+  "name": "untapped-serp",
+  "version": "0.2.0",
+  "description": "Live Google results and search volume for your agent, through your own DataForSEO account, with a daily spend cap.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "google",
+    "search results",
+    "rank tracking",
+    "search volume",
+    "keyword research",
+    "local search",
+    "dataforseo"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-mcp.json",
+  "interface": {
+    "displayName": "Untapped SERP",
+    "shortDescription": "Real Google results and search volume",
+    "longDescription": "Gives your agent live Google organic results (positions, People Also Ask, local pack, AI Overview cited domains, where your domain ranks) and Google Ads search volume, billed to your own DataForSEO account. Results are cached and a daily cap stops runaway spend. Credentials stay in your environment variables.",
+    "developerName": "Find Untapped Growth",
+    "category": "Research",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://finduntappedgrowth.com/",
+    "defaultPrompt": [
+      "Where does example.com rank on Google for 'plumber near me' in Austin, Texas?",
+      "Get Google search volume for these 20 keywords",
+      "How much have I spent on Google lookups today?"
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/untapped-serp.svg",
+    "logo": "./assets/untapped-serp.svg"
+  }
+}

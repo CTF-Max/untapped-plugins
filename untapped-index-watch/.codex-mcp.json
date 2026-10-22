@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "untapped-index-watch": {
+      "command": "python",
+      "args": [
+        "server/index_server.py"
+      ],
+      "cwd": ".",
+      "env_vars": [
+        "PATH",
+        "SYSTEMROOT",
+        "LOCALAPPDATA",
+        "HOME",
+        "USERPROFILE",
+        "UNTAPPED_GOOGLE_CLIENT_SECRET",
+        "UNTAPPED_GOOGLE_HOME",
+        "UNTAPPED_INDEX_HOME"
+      ]
+    }
+  }
+}

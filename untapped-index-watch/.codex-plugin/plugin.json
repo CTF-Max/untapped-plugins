@@ -1,0 +1,41 @@
+{
+  "name": "untapped-index-watch",
+  "version": "0.2.0",
+  "description": "Checks every sitemap URL against Search Console's URL Inspection, says what each problem usually means and what to do, and shows what changed since the last check. Free.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "google",
+    "search console",
+    "indexing",
+    "index coverage",
+    "sitemap",
+    "website health"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-mcp.json",
+  "interface": {
+    "displayName": "Untapped Index Watch",
+    "shortDescription": "Is every page in Google's index?",
+    "longDescription": "Signs in to your own Search Console (read-only), inspects each page in your sitemap, and reports indexed / not indexed / unknown with plain-language flags (dropped out, Google picked another canonical, not crawled for weeks, blocked by noindex or robots.txt) and the usual fix. Keeps a local history so you can see pages drop out or get picked up.",
+    "developerName": "Find Untapped Growth",
+    "category": "Research",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://finduntappedgrowth.com/",
+    "defaultPrompt": [
+      "Are all my pages indexed on Google? My site is example.com",
+      "Which pages dropped out of Google's index since last week?",
+      "Why isn't my new page showing up on Google?"
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/untapped-index-watch.svg",
+    "logo": "./assets/untapped-index-watch.svg"
+  }
+}

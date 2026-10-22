@@ -1,0 +1,36 @@
+{
+  "name": "untapped-plugins",
+  "owner": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "metadata": {
+    "description": "Google search tools for AI agents (live results, indexing, Search Console, site audits), from Find Untapped Growth."
+  },
+  "plugins": [
+    {
+      "name": "untapped-serp",
+      "source": "./untapped-serp",
+      "description": "Live Google results and search volume for your agent, through your own DataForSEO account, with a daily spend cap.",
+      "version": "0.2.0"
+    },
+    {
+      "name": "untapped-index-watch",
+      "source": "./untapped-index-watch",
+      "description": "Checks every sitemap URL against Search Console's URL Inspection, says what each problem usually means and what to do, and shows what changed since the last check. Free.",
+      "version": "0.2.0"
+    },
+    {
+      "name": "untapped-search-console",
+      "source": "./untapped-search-console",
+      "description": "Reads your own Search Console: the queries and pages that bring clicks, the ones close to page one, what moved since last month, and the site's true totals. Free.",
+      "version": "0.2.0"
+    },
+    {
+      "name": "untapped-site-audit",
+      "source": "./untapped-site-audit",
+      "description": "A guided live-site audit (indexed, seen, buyer phrases, on-page targeting, visitors, buyers) plus free on-page checks across a sitemap: titles, H1s, canonicals, noindex, schema, thin pages, duplicates.",
+      "version": "0.2.0"
+    }
+  ]
+}

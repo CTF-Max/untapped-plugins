@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "untapped-serp": {
+      "command": "python",
+      "args": [
+        "server/serp_server.py"
+      ],
+      "cwd": ".",
+      "env_vars": [
+        "PATH",
+        "SYSTEMROOT",
+        "LOCALAPPDATA",
+        "HOME",
+        "USERPROFILE",
+        "DATAFORSEO_LOGIN",
+        "DATAFORSEO_PASSWORD",
+        "UNTAPPED_SERP_DAILY_CAP_USD",
+        "UNTAPPED_SERP_SANDBOX",
+        "UNTAPPED_SERP_HOME"
+      ]
+    }
+  }
+}

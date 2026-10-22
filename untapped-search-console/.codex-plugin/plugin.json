@@ -1,0 +1,41 @@
+{
+  "name": "untapped-search-console",
+  "version": "0.2.0",
+  "description": "Reads your own Search Console: the queries and pages that bring clicks, the ones close to page one, what moved since last month, and the site's true totals. Free.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "google",
+    "search console",
+    "search traffic",
+    "queries",
+    "clicks",
+    "impressions"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-mcp.json",
+  "interface": {
+    "displayName": "Untapped Search Console",
+    "shortDescription": "What people search to find you, and what's close",
+    "longDescription": "Signs in to your own Search Console (read-only) and answers the questions owners ask: which searches bring clicks (protect them), which are close to page one (where work pays), which rank near the top but don't get chosen (fix the title), and what gained or lost since the previous period. Windows end three days back so late data never looks like a drop.",
+    "developerName": "Find Untapped Growth",
+    "category": "Research",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://finduntappedgrowth.com/",
+    "defaultPrompt": [
+      "What searches bring people to example.com?",
+      "Which of my queries are close to page one?",
+      "What changed in my Google traffic compared with last month?"
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/untapped-search-console.svg",
+    "logo": "./assets/untapped-search-console.svg"
+  }
+}

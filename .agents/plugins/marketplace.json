@@ -1,0 +1,56 @@
+{
+  "name": "untapped-plugins",
+  "interface": {
+    "displayName": "Find Untapped Growth"
+  },
+  "plugins": [
+    {
+      "name": "untapped-serp",
+      "source": {
+        "source": "local",
+        "path": "./untapped-serp"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "untapped-index-watch",
+      "source": {
+        "source": "local",
+        "path": "./untapped-index-watch"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "untapped-search-console",
+      "source": {
+        "source": "local",
+        "path": "./untapped-search-console"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    },
+    {
+      "name": "untapped-site-audit",
+      "source": {
+        "source": "local",
+        "path": "./untapped-site-audit"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}

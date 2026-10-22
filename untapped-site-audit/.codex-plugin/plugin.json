@@ -1,0 +1,41 @@
+{
+  "name": "untapped-site-audit",
+  "version": "0.2.0",
+  "description": "A guided live-site audit (indexed, seen, buyer phrases, on-page targeting, visitors, buyers) plus free on-page checks across a sitemap: titles, H1s, canonicals, noindex, schema, thin pages, duplicates.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "website audit",
+    "site audit",
+    "google",
+    "local search",
+    "on-page checks",
+    "sitemap"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-mcp.json",
+  "interface": {
+    "displayName": "Untapped Site Audit",
+    "shortDescription": "Audit a site in the order that finds the bottleneck",
+    "longDescription": "Walks your agent through a website audit in the order that finds the real bottleneck, so it never tunes titles on pages Google hasn't indexed. Includes free tools that read every page in a sitemap and flag missing or duplicate titles, H1s and descriptions, wrong canonicals, noindex pages in the sitemap, redirects, robots.txt blocks, broken schema and thin pages. Works with Untapped Index Watch, Search Console and SERP when installed.",
+    "developerName": "Find Untapped Growth",
+    "category": "Research",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://finduntappedgrowth.com/",
+    "defaultPrompt": [
+      "Audit example.com and tell me what's holding it back",
+      "Check every page in my sitemap for title and H1 problems",
+      "Why isn't my website bringing in customers?"
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/untapped-site-audit.svg",
+    "logo": "./assets/untapped-site-audit.svg"
+  }
+}
