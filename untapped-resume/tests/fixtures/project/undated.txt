@@ -1,0 +1,2 @@
+Created a command-line practice project.
+This document states no dates or metrics.

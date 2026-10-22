@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "untapped-resume": {
+      "command": "python",
+      "args": [
+        "server/resume_server.py"
+      ],
+      "cwd": ".",
+      "env_vars": [
+        "PATH",
+        "SYSTEMROOT",
+        "LOCALAPPDATA",
+        "HOME",
+        "USERPROFILE"
+      ]
+    }
+  }
+}

@@ -1,8 +1,9 @@
 # Untapped Plugins
 
-Four free plugins that let an AI agent (Claude Code or Codex) answer the questions a business owner asks about
+Five free plugins for AI agents (Claude Code or Codex). Four answer the questions a business owner asks about
 Google: *Are my pages on Google? What do people search to find me? Where do I show up for this phrase? What is
-holding my website back?* Built by [Find Untapped Growth](https://finduntappedgrowth.com/), a local visibility
+holding my website back?* The fifth helps someone applying for a job tailor their resume, portfolio and
+LinkedIn to one posting, using only their real work. Built by [Find Untapped Growth](https://finduntappedgrowth.com/), a local visibility
 company in Palm Coast, Florida.
 
 | Plugin | What your agent can do with it | Cost |
@@ -10,6 +11,7 @@ company in Palm Coast, Florida.
 | [Untapped Index Watch](untapped-index-watch/) | Check every page in your sitemap against Google's index, say what each problem usually means, and show which pages dropped out or got picked up since last time | Free (your own Search Console) |
 | [Untapped Search Console](untapped-search-console/) | Read your own Search Console: the searches that bring clicks, the ones close to page one, the ones near the top that nobody clicks, and what changed since last month | Free (your own Search Console) |
 | [Untapped Site Audit](untapped-site-audit/) | Audit a website in the order that finds the real bottleneck, plus page checks across a whole sitemap: titles, headings, descriptions, canonicals, noindex, schema, thin pages, duplicates | Free |
+| [Untapped Resume](untapped-resume/) | Read your own project files, git history, old resume and LinkedIn export, match them to one job posting, and write a one-page resume (Word, PDF, text), a portfolio page, a LinkedIn kit and a plan for the gaps. Every line traces to your real work; nothing is invented | Free |
 | [Untapped SERP](untapped-serp/) | See what Google actually shows for a phrase in a place (positions, People Also Ask, the map pack, which sites an AI Overview cites) and monthly search volume | Your own DataForSEO account: about $0.002 per Google lookup, $0.09 per search-volume request (list prices read 2026-10-09); a daily cap you set stops spending |
 
 ## Install
@@ -36,6 +38,7 @@ plugin's README has its setup (the Google plugins need a one-time, read-only Goo
 ## What they do with your data
 
 - They run on your computer. Find Untapped Growth receives nothing: no accounts, no telemetry, no analytics.
+- Untapped Resume reads only the folders and files you point it at, and fetches a job posting only when you give it a link.
 - The Google plugins sign in read-only and talk only to Google. Untapped SERP talks only to DataForSEO, with your
   own account. Untapped Site Audit reads only the website you ask it to audit.
 - Passwords and sign-in tokens are never written to logs or shown in answers. Each plugin's `PRIVACY.md` lists

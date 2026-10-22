@@ -1,0 +1,28 @@
+blob
+mark :1
+data 46
+def count_items(items):
+    return len(items)
+
+blob
+mark :2
+data 48
+# Inventory Tool
+Built a Python inventory tool.
+
+commit refs/heads/main
+mark :3
+committer Fixture <fixture@example.test> 1735689600 +0000
+data 6
+First
+M 100644 :1 main.py
+
+commit refs/heads/main
+mark :4
+committer Fixture <fixture@example.test> 1735776000 +0000
+data 7
+Second
+from :3
+M 100644 :2 README.md
+
+done

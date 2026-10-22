@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.CTF-Max/untapped-resume",
+  "title": "Untapped Resume",
+  "description": "Tailor a resume and portfolio to one job, with evidence",
+  "version": "0.3.0",
+  "websiteUrl": "https://github.com/CTF-Max/untapped-plugins/tree/main/untapped-resume#readme",
+  "repository": {
+    "url": "https://github.com/CTF-Max/untapped-plugins",
+    "source": "github",
+    "subfolder": "untapped-resume"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/CTF-Max/untapped-plugins/releases/download/v0.3.0/untapped-resume-mcp-0.3.0.mcpb",
+      "version": "0.3.0",
+      "fileSha256": "b348de294a4a377e854e5d398c975df697018d2be40ba76de2810d7d5e35de46",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

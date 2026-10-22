@@ -1,0 +1,34 @@
+{
+  "name": "untapped-resume",
+  "displayName": "Untapped Resume",
+  "version": "0.3.0",
+  "description": "Build a source-backed resume, portfolio and LinkedIn kit for one job from local evidence. Free. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "portfolio",
+    "linkedin",
+    "job application",
+    "evidence",
+    "career"
+  ],
+  "icon": "./assets/untapped-resume.svg",
+  "documentationUrl": "https://github.com/CTF-Max/untapped-plugins/tree/main/untapped-resume#readme",
+  "supportUrl": "https://github.com/CTF-Max/untapped-plugins/issues",
+  "privacyPolicyUrl": "https://github.com/CTF-Max/untapped-plugins/blob/main/untapped-resume/PRIVACY.md",
+  "mcpServers": {
+    "untapped-resume": {
+      "command": "python",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/server/resume_server.py"
+      ],
+      "env": {}
+    }
+  }
+}

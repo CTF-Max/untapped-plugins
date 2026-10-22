@@ -9,6 +9,12 @@
   },
   "plugins": [
     {
+      "name": "untapped-resume",
+      "source": "./untapped-resume",
+      "description": "Build a source-backed resume, portfolio and LinkedIn kit for one job from local evidence. Free. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
+      "version": "0.3.0"
+    },
+    {
       "name": "untapped-serp",
       "source": "./untapped-serp",
       "description": "Live Google results and search volume for your agent, through your own DataForSEO account, with a daily spend cap.",

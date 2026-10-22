@@ -29,6 +29,8 @@ SCHEMA = "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schem
 
 # Same settings as the Claude Code plugin, under the names the servers read first.
 BUNDLE_SETTINGS = {
+    "untapped-agency-compare": ({}, {}),
+    "untapped-resume": ({}, {}),
     "untapped-serp": (
         {"dataforseo_login": {"type": "string", "title": "DataForSEO API login", "sensitive": True, "required": True,
                               "description": "From the DataForSEO dashboard → API Access."},
@@ -103,6 +105,7 @@ def build(p):
     root = LANE / p["name"]
     files = sorted(f for f in (root / "server").glob("*.py")) + [root / "LICENSE", root / "README.md",
                                                                   root / "PRIVACY.md"]
+    files += [root / path for path in p.get("bundle_data", [])]
     DIST.mkdir(exist_ok=True)
     target = DIST / ("%s-mcp-%s.mcpb" % (p["name"], p["version"]))  # registry rule: "mcp" in the file name
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as z:
@@ -133,9 +136,14 @@ def registry_entry(p, url, sha):
 
 def main():
     check = "--check" in sys.argv
+    names = [arg for arg in sys.argv[1:] if arg != "--check"]
+    unknown = set(names) - {p["name"] for p in m.PRESENT_PLUGINS}
+    if unknown:
+        raise SystemExit("Unknown plugin(s): " + ", ".join(sorted(unknown)))
+    selected = [p for p in m.PRESENT_PLUGINS if not names or p["name"] in names]
     REGISTRY.mkdir(exist_ok=True)
     drift = []
-    for p in m.PLUGINS:
+    for p in selected:
         target, sha = build(p)
         url = "%s/releases/download/v%s/%s" % (m.REPO, p["version"], target.name)
         path = REGISTRY / ("%s.server.json" % p["name"])

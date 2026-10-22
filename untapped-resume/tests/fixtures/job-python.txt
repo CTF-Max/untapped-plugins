@@ -1,0 +1,13 @@
+Title: Junior Python Developer
+Company: Example Inventory
+Requirements:
+- Python
+- SQL
+- Unit tests
+Nice-to-have:
+- Docker
+- Open source contributions
+Responsibilities:
+Maintain the Python inventory tool.
+Benefits:
+Training and flexible hours.

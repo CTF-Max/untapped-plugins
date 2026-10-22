@@ -25,6 +25,36 @@ GOOGLE_ENV = ["UNTAPPED_GOOGLE_CLIENT_SECRET", "UNTAPPED_GOOGLE_HOME"]
 
 PLUGINS = [
     {
+        "name": "untapped-agency-compare", "version": "0.1.0", "public": False,  # held until Max approves futg_facts.json
+        "server": "server/agency_server.py", "category": "Research",
+        "display": "Untapped Agency Compare", "short": "Compare agency services and terms with sources",
+        "description": "Compare marketing agencies side by side using published claims and questions for missing facts. "
+                       "Does not rank agencies or verify unpublished claims. Made by Find Untapped Growth, an agency included in every table.",
+        "long": "See services, contract terms, ownership, reporting, prices, guarantees and review ratings with sources "
+                "and dates. Get questions for missing facts. Does not rank agencies or verify claims an agency does not "
+                "publish. Made by Find Untapped Growth, an agency included under the same criteria in every table.",
+        "keywords": ["marketing agencies", "comparison", "agency contracts", "ownership", "published prices"],
+        "env": [], "bundle_data": ["data/criteria.json", "data/futg_facts.json"],
+        "prompts": ["Compare these agencies using the pages I provide",
+                    "What questions should I ask each agency before signing?",
+                    "Show the criteria for comparing marketing agencies"],
+    },
+    {
+        "name": "untapped-resume", "version": "0.3.0", "server": "server/resume_server.py", "category": "Productivity",
+        "display": "Untapped Resume", "short": "Tailor a resume and portfolio to one job, with evidence",
+        "description": "Build a source-backed resume, portfolio and LinkedIn kit for one job from local evidence. "
+                       "Free. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
+        "long": "Reads your project files, git history, old resumes and LinkedIn export locally. Helps your agent "
+                "match one job, write a plain resume and portfolio, and prepare a LinkedIn kit, cover letter and "
+                "gap plan. Missing evidence stays missing. Cannot post to LinkedIn; paste + upload takes about "
+                "2 minutes. Does not guarantee interviews.",
+        "keywords": ["resume", "portfolio", "linkedin", "job application", "evidence", "career"],
+        "env": [],
+        "prompts": ["Tailor my resume to this job using my project folder",
+                    "Build a portfolio from my three most relevant projects",
+                    "Check my resume for missing evidence and job requirements"],
+    },
+    {
         "name": "untapped-serp", "version": VERSION, "server": "server/serp_server.py", "category": "Research",
         "display": "Untapped SERP", "short": "Real Google results and search volume",
         "description": "Live Google results and search volume for your agent, through your own DataForSEO account, "
@@ -109,6 +139,10 @@ PLUGINS = [
     },
 ]
 
+PUBLIC_PLUGINS = [p for p in PLUGINS if p.get("public", True)]  # listed in the marketplaces
+# A held plugin is not in the public export, so only plugins whose folder exists here are built and checked.
+PRESENT_PLUGINS = [p for p in PLUGINS if p.get("public", True) or (LANE / p["name"]).is_dir()]
+
 
 def dump(obj):
     return json.dumps(obj, indent=2, ensure_ascii=False) + "\n"
@@ -151,12 +185,12 @@ def marketplaces():
     codex = {"name": "untapped-plugins", "interface": {"displayName": "Find Untapped Growth"},
              "plugins": [{"name": p["name"], "source": {"source": "local", "path": "./" + p["name"]},
                           "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
-                          "category": p["category"]} for p in PLUGINS]}
+                          "category": p["category"]} for p in PUBLIC_PLUGINS]}
     claude = {"name": "untapped-plugins", "owner": AUTHOR,
               "metadata": {"description": "Google search tools for AI agents (live results, indexing, Search Console, "
                                           "site audits), from Find Untapped Growth."},
               "plugins": [{"name": p["name"], "source": "./" + p["name"], "description": p["description"],
-                           "version": p["version"]} for p in PLUGINS]}
+                           "version": p["version"]} for p in PUBLIC_PLUGINS]}
     return {LANE / ".agents" / "plugins" / "marketplace.json": dump(codex),
             LANE / ".claude-plugin" / "marketplace.json": dump(claude)}
 
@@ -187,7 +221,7 @@ def main():
         print("Skill headers that won't parse: " + "; ".join(headers))
         return 1
     wanted = marketplaces()
-    for p in PLUGINS:
+    for p in PRESENT_PLUGINS:
         wanted.update(files_for(p))
     drift = []
     for path, text in wanted.items():
@@ -200,7 +234,7 @@ def main():
     if check and drift:
         print("Manifests out of date: " + ", ".join(drift))
         return 1
-    print(("Manifests current" if check else "Wrote %d file(s)" % len(drift)) + " (%d plugins)." % len(PLUGINS))
+    print(("Manifests current" if check else "Wrote %d file(s)" % len(drift)) + " (%d plugins)." % len(PRESENT_PLUGINS))
     return 0
 
 

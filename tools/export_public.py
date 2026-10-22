@@ -16,8 +16,10 @@ from pathlib import Path
 
 LANE = Path(__file__).resolve().parents[1]
 PUBLIC = [".claude-plugin", ".agents", ".gitignore", "LICENSE", "README.md", "registry", "shared", "tools",
-          "untapped-serp", "untapped-index-watch", "untapped-search-console", "untapped-site-audit"]
-SKIP_DIRS = {"__pycache__", ".pytest_cache", "dist", "smoke"}
+          "untapped-serp", "untapped-index-watch", "untapped-search-console", "untapped-site-audit", "untapped-resume"]
+# Built but not released: their registry entries stay private too.
+PRIVATE_FILES = {"registry/untapped-agency-compare.server.json", "tools/sync_agency_compare.py"}
+SKIP_DIRS = {"__pycache__", ".pytest_cache", "dist", "smoke", ".build"}
 SKIP_FILES = {"Thumbs.db", "desktop.ini", ".DS_Store"}
 SKIP_SUFFIXES = {".pyc", ".mcpb", ".zip"}
 
@@ -42,7 +44,7 @@ FAKE_VALUES = {
     "ya29.token-for-tests", "1//r-123456", 'client_secret": "csecret-123"', "login-SECRET-7781@example.com",
     "you@example.com",
 }
-ALLOWED_EMAIL_DOMAINS = ("example.com", "example.org")
+ALLOWED_EMAIL_DOMAINS = ("example.com", "example.org", "example.test")
 
 
 def public_files(root):
@@ -53,6 +55,8 @@ def public_files(root):
             continue
         for path in sorted(top.rglob("*")):
             rel = path.relative_to(root)
+            if rel.as_posix() in PRIVATE_FILES:
+                continue
             if path.is_dir() or SKIP_DIRS.intersection(rel.parts) or path.name in SKIP_FILES \
                     or path.suffix in SKIP_SUFFIXES:
                 continue
