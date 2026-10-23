@@ -1,0 +1,42 @@
+{
+  "name": "untapped-reviews-maps",
+  "version": "0.1.0",
+  "description": "Write review replies and requests, check a business profile, and work through Google Maps problems from the details you share.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "google reviews",
+    "review replies",
+    "google maps",
+    "business profile",
+    "local business"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Untapped Reviews & Maps",
+    "shortDescription": "Review replies and Maps fixes",
+    "longDescription": "For owners of local businesses who want the job done. Get calm review replies in your voice, neutral review requests for text or email, a business profile fix list with replacement text, and clear Google Maps problem steps with an appeal note when needed. Replies and requests are ready to paste. The four skills follow Google's review rules and the FTC review rule using dated source notes. The plugin works only from what you paste, upload, or tell it. It cannot log in to your profile, change anything for you, or promise rankings. Made by Find Untapped Growth.",
+    "developerName": "Find Untapped Growth",
+    "category": "Productivity",
+    "capabilities": [
+      "Write review replies",
+      "Write review requests",
+      "Check a business profile",
+      "Fix Google Maps problems"
+    ],
+    "websiteURL": "https://finduntappedgrowth.com/",
+    "defaultPrompt": [
+      "Write a calm reply to this 1-star review",
+      "Why isn't my business showing on Google Maps?",
+      "Check my business profile against Google's rules"
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

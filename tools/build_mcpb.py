@@ -137,10 +137,11 @@ def registry_entry(p, url, sha):
 def main():
     check = "--check" in sys.argv
     names = [arg for arg in sys.argv[1:] if arg != "--check"]
-    unknown = set(names) - {p["name"] for p in m.PRESENT_PLUGINS}
+    servers = [p for p in m.PRESENT_PLUGINS if "server" in p]  # skills-only plugins have no bundle
+    unknown = set(names) - {p["name"] for p in servers}
     if unknown:
         raise SystemExit("Unknown plugin(s): " + ", ".join(sorted(unknown)))
-    selected = [p for p in m.PRESENT_PLUGINS if not names or p["name"] in names]
+    selected = [p for p in servers if not names or p["name"] in names]
     REGISTRY.mkdir(exist_ok=True)
     drift = []
     for p in selected:

@@ -1,9 +1,10 @@
 # Untapped Plugins
 
-Five free plugins for AI agents (Claude Code or Codex). Four answer the questions a business owner asks about
+Six free plugins for AI agents (Claude Code, Codex or the ChatGPT desktop app). Four answer the questions a business owner asks about
 Google: *Are my pages on Google? What do people search to find me? Where do I show up for this phrase? What is
 holding my website back?* The fifth helps someone applying for a job tailor their resume, portfolio and
-LinkedIn to one posting, using only their real work. Built by [Find Untapped Growth](https://finduntappedgrowth.com/), a local visibility
+LinkedIn to one posting, using only their real work. The sixth writes Google review replies and review
+requests that follow Google's rules, checks a business profile, and walks an owner through Google Maps problems. Built by [Find Untapped Growth](https://finduntappedgrowth.com/), a local visibility
 company in Palm Coast, Florida.
 
 | Plugin | What your agent can do with it | Cost |
@@ -12,6 +13,7 @@ company in Palm Coast, Florida.
 | [Untapped Search Console](untapped-search-console/) | Read your own Search Console: the searches that bring clicks, the ones close to page one, the ones near the top that nobody clicks, and what changed since last month | Free (your own Search Console) |
 | [Untapped Site Audit](untapped-site-audit/) | Audit a website in the order that finds the real bottleneck, plus page checks across a whole sitemap: titles, headings, descriptions, canonicals, noindex, schema, thin pages, duplicates | Free |
 | [Untapped Resume](untapped-resume/) | Read your own project files, git history, old resume and LinkedIn export, match them to one job posting, and write a one-page resume (Word, PDF, text), a portfolio page, a LinkedIn kit and a plan for the gaps. Every line traces to your real work; nothing is invented | Free |
+| [Untapped Reviews & Maps](chatgpt/untapped-reviews-maps/) | Write replies to Google reviews (privacy-safe for health and legal businesses), write review requests with no rewards or cherry-picking, check a business profile against Google's rules, and walk through suspensions, stuck verification and "not showing on Maps". Instructions only: no server, nothing to sign in to | Free |
 | [Untapped SERP](untapped-serp/) | See what Google actually shows for a phrase in a place (positions, People Also Ask, the map pack, which sites an AI Overview cites) and monthly search volume | Your own DataForSEO account: about $0.002 per Google lookup, $0.09 per search-volume request (list prices read 2026-10-09); a daily cap you set stops spending |
 
 ## Install
@@ -32,7 +34,11 @@ codex plugin marketplace add CTF-Max/untapped-plugins
 codex plugin add untapped-site-audit@untapped-plugins
 ```
 
-Every plugin needs Python 3.10 or newer on PATH as `python`, and nothing else: no packages to install. Each
+**ChatGPT desktop app:** add the marketplace with the `codex plugin marketplace add` line above, restart the
+app, and install from the Plugins Directory (the marketplace shows as Find Untapped Growth). Untapped Reviews & Maps
+needs nothing else; the other plugins run Python tools on your computer.
+
+Every plugin except Untapped Reviews & Maps needs Python 3.10 or newer on PATH as `python`, and nothing else: no packages to install. Each
 plugin's README has its setup (the Google plugins need a one-time, read-only Google sign-in).
 
 ## What they do with your data

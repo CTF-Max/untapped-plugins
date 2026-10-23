@@ -5,7 +5,7 @@
     "url": "https://finduntappedgrowth.com/"
   },
   "metadata": {
-    "description": "Google search tools for AI agents (live results, indexing, Search Console, site audits), from Find Untapped Growth."
+    "description": "Google search tools for AI agents (live results, indexing, Search Console, site audits, reviews and Maps help), from Find Untapped Growth."
   },
   "plugins": [
     {
@@ -37,6 +37,12 @@
       "source": "./untapped-site-audit",
       "description": "A guided live-site audit (indexed, seen, buyer phrases, on-page targeting, visitors, buyers) plus free on-page checks across a sitemap: titles, H1s, canonicals, noindex, schema, thin pages, duplicates.",
       "version": "0.2.0"
+    },
+    {
+      "name": "untapped-reviews-maps",
+      "source": "./chatgpt/untapped-reviews-maps",
+      "description": "Write review replies and requests, check a business profile, and work through Google Maps problems from the details you share.",
+      "version": "0.1.0"
     }
   ]
 }

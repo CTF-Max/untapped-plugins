@@ -139,16 +139,53 @@ PLUGINS = [
     },
 ]
 
+
+
+def skills_only(path):
+    """A skills-only plugin keeps its listing in its portable plugin.json (the ChatGPT source, tools/build_chatgpt.py);
+    the Claude and Codex manifests are made from it, so the copy is never edited twice."""
+    manifest = json.loads((LANE / path / "plugin.json").read_text(encoding="utf-8"))
+    ui = manifest["extensions"]["com.openai"]["interface"]
+    return {"name": manifest["name"], "version": manifest["version"], "path": path, "category": ui["category"],
+            "display": ui["displayName"], "short": ui["shortDescription"], "description": manifest["description"],
+            "long": ui["longDescription"], "keywords": manifest["keywords"], "prompts": ui["defaultPrompt"],
+            "capabilities": ui["capabilities"], "icon": ui["logo"], "composer_icon": ui["composerIcon"]}
+
+
+PLUGINS += [skills_only("chatgpt/untapped-reviews-maps")]
 PUBLIC_PLUGINS = [p for p in PLUGINS if p.get("public", True)]  # listed in the marketplaces
 # A held plugin is not in the public export, so only plugins whose folder exists here are built and checked.
-PRESENT_PLUGINS = [p for p in PLUGINS if p.get("public", True) or (LANE / p["name"]).is_dir()]
+PRESENT_PLUGINS = [p for p in PLUGINS if p.get("public", True) or (LANE / p.get("path", p["name"])).is_dir()]
 
 
 def dump(obj):
     return json.dumps(obj, indent=2, ensure_ascii=False) + "\n"
 
 
+def folder(p):
+    return p.get("path", p["name"])
+
+
+def skills_only_files(p):
+    docs = "%s/tree/main/%s" % (REPO, folder(p))
+    codex = {"name": p["name"], "version": p["version"], "description": p["description"], "author": AUTHOR,
+             "homepage": HOME, "repository": REPO, "license": LICENSE, "keywords": p["keywords"], "skills": "./skills/",
+             "interface": {"displayName": p["display"], "shortDescription": p["short"], "longDescription": p["long"],
+                           "developerName": AUTHOR["name"], "category": p["category"],
+                           "capabilities": p["capabilities"], "websiteURL": HOME, "defaultPrompt": p["prompts"],
+                           "brandColor": "#0F766E", "composerIcon": p["composer_icon"], "logo": p["icon"]}}
+    claude = {"name": p["name"], "displayName": p["display"], "version": p["version"],
+              "description": p["description"], "author": AUTHOR, "homepage": HOME, "repository": REPO,
+              "license": LICENSE, "keywords": p["keywords"][:6], "icon": p["icon"],
+              "documentationUrl": docs + "#readme", "supportUrl": REPO + "/issues",
+              "privacyPolicyUrl": "%s/blob/main/%s/PRIVACY.md" % (REPO, folder(p))}
+    root = LANE / folder(p)
+    return {root / ".codex-plugin" / "plugin.json": dump(codex), root / ".claude-plugin" / "plugin.json": dump(claude)}
+
+
 def files_for(p):
+    if "path" in p:
+        return skills_only_files(p)
     env = p["env"]
     icon = "./assets/%s.svg" % p["name"]
     codex = {
@@ -183,13 +220,13 @@ def files_for(p):
 
 def marketplaces():
     codex = {"name": "untapped-plugins", "interface": {"displayName": "Find Untapped Growth"},
-             "plugins": [{"name": p["name"], "source": {"source": "local", "path": "./" + p["name"]},
+             "plugins": [{"name": p["name"], "source": {"source": "local", "path": "./" + folder(p)},
                           "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
                           "category": p["category"]} for p in PUBLIC_PLUGINS]}
     claude = {"name": "untapped-plugins", "owner": AUTHOR,
               "metadata": {"description": "Google search tools for AI agents (live results, indexing, Search Console, "
-                                          "site audits), from Find Untapped Growth."},
-              "plugins": [{"name": p["name"], "source": "./" + p["name"], "description": p["description"],
+                                          "site audits, reviews and Maps help), from Find Untapped Growth."},
+              "plugins": [{"name": p["name"], "source": "./" + folder(p), "description": p["description"],
                            "version": p["version"]} for p in PUBLIC_PLUGINS]}
     return {LANE / ".agents" / "plugins" / "marketplace.json": dump(codex),
             LANE / ".claude-plugin" / "marketplace.json": dump(claude)}
@@ -199,7 +236,7 @@ def skill_header_problems():
     """Plain (unquoted) YAML values in SKILL.md headers: a ': ' or ' #' inside one makes the whole header unreadable,
     and Claude then loads the skill with no description (found 2026-10-22 by `claude plugin validate --strict`)."""
     problems = []
-    for skill in sorted(LANE.glob("*/skills/*/SKILL.md")):
+    for skill in sorted([*LANE.glob("*/skills/*/SKILL.md"), *LANE.glob("chatgpt/*/skills/*/SKILL.md")]):
         parts = skill.read_text(encoding="utf-8").split("---", 2)
         if len(parts) < 3 or parts[0].strip():
             problems.append("%s: no --- header" % skill.relative_to(LANE))

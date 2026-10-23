@@ -63,6 +63,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Research"
+    },
+    {
+      "name": "untapped-reviews-maps",
+      "source": {
+        "source": "local",
+        "path": "./chatgpt/untapped-reviews-maps"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }

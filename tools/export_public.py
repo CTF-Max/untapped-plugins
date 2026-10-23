@@ -16,9 +16,13 @@ from pathlib import Path
 
 LANE = Path(__file__).resolve().parents[1]
 PUBLIC = [".claude-plugin", ".agents", ".gitignore", "LICENSE", "README.md", "registry", "shared", "tools",
-          "untapped-serp", "untapped-index-watch", "untapped-search-console", "untapped-site-audit", "untapped-resume"]
+          "untapped-serp", "untapped-index-watch", "untapped-search-console", "untapped-site-audit", "untapped-resume",
+          "chatgpt/untapped-reviews-maps"]
 # Built but not released: their registry entries stay private too.
-PRIVATE_FILES = {"registry/untapped-agency-compare.server.json", "tools/sync_agency_compare.py"}
+PRIVATE_FILES = {"registry/untapped-agency-compare.server.json", "tools/sync_agency_compare.py",
+                 # ChatGPT build + evals need the held agency plugin and the private chatgpt/ sources.
+                 "tools/build_chatgpt.py", "tools/run_chatgpt_evals.py", "tools/tests/test_build_chatgpt.py",
+                 "tools/schemas/agent-plugins-1.0.0-plugin.schema.json"}
 SKIP_DIRS = {"__pycache__", ".pytest_cache", "dist", "smoke", ".build"}
 SKIP_FILES = {"Thumbs.db", "desktop.ini", ".DS_Store"}
 SKIP_SUFFIXES = {".pyc", ".mcpb", ".zip"}
@@ -45,6 +49,8 @@ FAKE_VALUES = {
     "you@example.com",
 }
 ALLOWED_EMAIL_DOMAINS = ("example.com", "example.org", "example.test")
+# The support address already published on https://finduntappedgrowth.com/faq/; the skills-only plugin lists it.
+PUBLIC_EMAILS = {"max@finduntappedgrowth.com"}
 
 
 def public_files(root):
@@ -69,6 +75,8 @@ def scan(root):
         rel = path.relative_to(root).as_posix()
         if path.stat().st_size > 256 * 1024 and path.suffix not in (".png", ".svg"):
             findings.append("%s: over 256 KiB (Anthropic directory holds it for review)" % rel)
+        if path.suffix in (".png", ".jpg", ".jpeg", ".webp"):  # icons; no text to scan
+            continue
         try:
             text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
@@ -80,7 +88,8 @@ def scan(root):
                     value = match.group(0)
                     if any(value in fake or fake in value for fake in FAKE_VALUES):
                         continue
-                    if label == "e-mail address" and value.lower().endswith(ALLOWED_EMAIL_DOMAINS):
+                    if label == "e-mail address" and (value.lower().endswith(ALLOWED_EMAIL_DOMAINS)
+                                                      or value.lower() in PUBLIC_EMAILS):
                         continue
                     findings.append("%s:%d: %s: %s" % (rel, lineno, label, value[:12] + "..."))
     return findings

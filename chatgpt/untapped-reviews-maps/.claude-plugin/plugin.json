@@ -1,0 +1,24 @@
+{
+  "name": "untapped-reviews-maps",
+  "displayName": "Untapped Reviews & Maps",
+  "version": "0.1.0",
+  "description": "Write review replies and requests, check a business profile, and work through Google Maps problems from the details you share.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "google reviews",
+    "review replies",
+    "google maps",
+    "business profile",
+    "local business"
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://github.com/CTF-Max/untapped-plugins/tree/main/chatgpt/untapped-reviews-maps#readme",
+  "supportUrl": "https://github.com/CTF-Max/untapped-plugins/issues",
+  "privacyPolicyUrl": "https://github.com/CTF-Max/untapped-plugins/blob/main/chatgpt/untapped-reviews-maps/PRIVACY.md"
+}

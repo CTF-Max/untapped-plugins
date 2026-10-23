@@ -29,6 +29,8 @@ def sync(root: Path, check: bool = False) -> int:
     drift: list[str] = []
     for plugin in plugin_dirs:
         server = plugin / "server"
+        if not server.is_dir():  # skills-only plugin (chatgpt/): no server, nothing shared
+            continue
         for name in wanted(plugin):
             source, target = shared / name, server / name
             if not source.is_file():
