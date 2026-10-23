@@ -16,10 +16,10 @@ from pathlib import Path
 
 LANE = Path(__file__).resolve().parents[1]
 PUBLIC = [".claude-plugin", ".agents", ".gitignore", "LICENSE", "README.md", "registry", "shared", "tools",
-          "untapped-serp", "untapped-index-watch", "untapped-search-console", "untapped-site-audit", "untapped-resume",
+          "untapped-serp", "untapped-index-watch", "untapped-search-console", "untapped-site-audit", "untapped-resume", "untapped-agency-compare",
           "chatgpt/untapped-reviews-maps"]
 # Built but not released: their registry entries stay private too.
-PRIVATE_FILES = {"registry/untapped-agency-compare.server.json", "tools/sync_agency_compare.py",
+PRIVATE_FILES = {"untapped-agency-compare/BUILD_CHECKPOINT.md",  # Codex build notes
                  # ChatGPT build + evals need the held agency plugin and the private chatgpt/ sources.
                  "tools/build_chatgpt.py", "tools/run_chatgpt_evals.py", "tools/tests/test_build_chatgpt.py",
                  "tools/schemas/agent-plugins-1.0.0-plugin.schema.json"}
@@ -48,7 +48,7 @@ FAKE_VALUES = {
     "ya29.token-for-tests", "1//r-123456", 'client_secret": "csecret-123"', "login-SECRET-7781@example.com",
     "you@example.com",
 }
-ALLOWED_EMAIL_DOMAINS = ("example.com", "example.org", "example.test")
+ALLOWED_EMAIL_DOMAINS = ("example.com", "example.org", "example.test", "a.example")  # .example is reserved (RFC 2606)
 # The support address already published on https://finduntappedgrowth.com/faq/; the skills-only plugin lists it.
 PUBLIC_EMAILS = {"max@finduntappedgrowth.com"}
 

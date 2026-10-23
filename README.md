@@ -1,14 +1,15 @@
 # Untapped Plugins
 
-Six free plugins for AI agents (Claude Code, Codex or the ChatGPT desktop app). Four answer the questions a business owner asks about
+Seven free plugins for AI agents (Claude Code, Codex or the ChatGPT desktop app). Four answer the questions a business owner asks about
 Google: *Are my pages on Google? What do people search to find me? Where do I show up for this phrase? What is
 holding my website back?* The fifth helps someone applying for a job tailor their resume, portfolio and
 LinkedIn to one posting, using only their real work. The sixth writes Google review replies and review
-requests that follow Google's rules, checks a business profile, and walks an owner through Google Maps problems. Built by [Find Untapped Growth](https://finduntappedgrowth.com/), a local visibility
+requests that follow Google's rules, checks a business profile, and walks an owner through Google Maps problems. The seventh compares marketing agencies side by side from their own pages, with the questions to ask before signing. Built by [Find Untapped Growth](https://finduntappedgrowth.com/), a local visibility
 company in Palm Coast, Florida.
 
 | Plugin | What your agent can do with it | Cost |
 |---|---|---|
+| [Untapped Agency Compare](untapped-agency-compare/) | Put marketing agencies side by side from the pages you give it: services, contract and cancelling, who owns the domain, site and profile, reports, published prices, guarantees and review rating. Every fact is an exact quote with its page and date, or "not stated" with a question to ask. It doesn't rank or pick a winner. Made by Find Untapped Growth, which appears as one column judged the same way | Free |
 | [Untapped Index Watch](untapped-index-watch/) | Check every page in your sitemap against Google's index, say what each problem usually means, and show which pages dropped out or got picked up since last time | Free (your own Search Console) |
 | [Untapped Search Console](untapped-search-console/) | Read your own Search Console: the searches that bring clicks, the ones close to page one, the ones near the top that nobody clicks, and what changed since last month | Free (your own Search Console) |
 | [Untapped Site Audit](untapped-site-audit/) | Audit a website in the order that finds the real bottleneck, plus page checks across a whole sitemap: titles, headings, descriptions, canonicals, noindex, schema, thin pages, duplicates | Free |
@@ -45,6 +46,7 @@ plugin's README has its setup (the Google plugins need a one-time, read-only Goo
 
 - They run on your computer. Find Untapped Growth receives nothing: no accounts, no telemetry, no analytics.
 - Untapped Resume reads only the folders and files you point it at, and fetches a job posting only when you give it a link.
+- Untapped Agency Compare reads only the agency pages you name, one page at a time, and keeps nothing.
 - The Google plugins sign in read-only and talk only to Google. Untapped SERP talks only to DataForSEO, with your
   own account. Untapped Site Audit reads only the website you ask it to audit.
 - Passwords and sign-in tokens are never written to logs or shown in answers. Each plugin's `PRIVACY.md` lists

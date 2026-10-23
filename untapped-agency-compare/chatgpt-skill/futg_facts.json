@@ -1,0 +1,132 @@
+{
+ "name": "Find Untapped Growth",
+ "approval": {
+  "status": "approved by Max 2026-10-23",
+  "note": "Exact quotes from finduntappedgrowth.com read 2026-10-23. Prices read from /pricing/ after release AZ went live (2026-10-23); a quote may join a few lines of one price card. Reviews: the site says '5.0 on Google, 3 reviews', which the same rating rule used for every agency does not read as a rating out of 5, so it stays not stated. ChatGPT copy: quotes with prices left out."
+ },
+ "facts": {
+  "services": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "Reviews asked and answered, posts, listings, monthly report.",
+     "source_url": "https://finduntappedgrowth.com/google-business-profile-management/",
+     "date_read": "2026-10-23"
+    },
+    {
+     "quote": "Reviews, posts, replies and tracking every month, with a report from Google's own numbers.",
+     "source_url": "https://finduntappedgrowth.com/how-it-works/",
+     "date_read": "2026-10-23"
+    },
+    {
+     "quote": "One page: who you are, what you do, the towns you serve, your hours",
+     "source_url": "https://finduntappedgrowth.com/website-design/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "contract": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "Yes, a short written one you read before you pay anything. It says what I do each month, what it costs, and how either of us can end it.",
+     "source_url": "https://finduntappedgrowth.com/faq/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "cancellation": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "The written agreement says how either of us can end the monthly work. Either way, your domain and website stay yours.",
+     "source_url": "https://finduntappedgrowth.com/website-maintenance/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "domain_ownership": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "You own it. You buy the domain, and if you ever leave, the site goes with you.",
+     "source_url": "https://finduntappedgrowth.com/website-design/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "site_ownership": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "You still own everything. Your domain and your website go with you if you leave.",
+     "source_url": "https://finduntappedgrowth.com/website-maintenance/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "profile_ownership": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "Before any paid work starts, you get a short written agreement to read. It sets out what I do, what it costs, how long it runs and how either of us can end it. What I build for you stays yours: your Google profile, your domain and your website.",
+     "source_url": "https://finduntappedgrowth.com/terms/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "ad_account_ownership": {
+   "status": "not stated",
+   "candidates": []
+  },
+  "reporting_cadence": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "A report you can check. We run the same Google Maps searches, the same way, every month. One page: what we did, what changed, what's still open.",
+     "source_url": "https://finduntappedgrowth.com/google-business-profile-management/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "reporting_format": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "A monthly report from Google's own numbers — calls, directions, clicks. Not my dashboard. Google's.",
+     "source_url": "https://finduntappedgrowth.com/how-it-works/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "prices": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "Found $ 300 / month",
+     "source_url": "https://finduntappedgrowth.com/pricing/",
+     "date_read": "2026-10-23"
+    },
+    {
+     "quote": "Found & Recommended $ 400 / month",
+     "source_url": "https://finduntappedgrowth.com/pricing/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "guarantees": {
+   "status": "stated",
+   "candidates": [
+    {
+     "quote": "I work to improve how your business appears on Google Maps through profile maintenance, review systems, local content, tracking, and reporting. I can't guarantee a specific ranking position or timeline, because Google's algorithm is outside anyone's control. What I can guarantee is that I will do the work, do it honestly, and tell you the truth about where you stand.",
+     "source_url": "https://finduntappedgrowth.com/terms/",
+     "date_read": "2026-10-23"
+    }
+   ]
+  },
+  "reviews": {
+   "status": "not stated",
+   "candidates": []
+  }
+ }
+}

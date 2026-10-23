@@ -25,7 +25,7 @@ GOOGLE_ENV = ["UNTAPPED_GOOGLE_CLIENT_SECRET", "UNTAPPED_GOOGLE_HOME"]
 
 PLUGINS = [
     {
-        "name": "untapped-agency-compare", "version": "0.1.0", "public": False,  # held until Max approves futg_facts.json
+        "name": "untapped-agency-compare", "version": "0.4.0",
         "server": "server/agency_server.py", "category": "Research",
         "display": "Untapped Agency Compare", "short": "Compare agency services and terms with sources",
         "description": "Compare marketing agencies side by side using published claims and questions for missing facts. "

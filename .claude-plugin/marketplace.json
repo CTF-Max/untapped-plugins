@@ -9,6 +9,12 @@
   },
   "plugins": [
     {
+      "name": "untapped-agency-compare",
+      "source": "./untapped-agency-compare",
+      "description": "Compare marketing agencies side by side using published claims and questions for missing facts. Does not rank agencies or verify unpublished claims. Made by Find Untapped Growth, an agency included in every table.",
+      "version": "0.4.0"
+    },
+    {
       "name": "untapped-resume",
       "source": "./untapped-resume",
       "description": "Build a source-backed resume, portfolio and LinkedIn kit for one job from local evidence. Free. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",

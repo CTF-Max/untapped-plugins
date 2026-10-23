@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "untapped-agency-compare": {
+      "command": "python",
+      "args": [
+        "server/agency_server.py"
+      ],
+      "cwd": ".",
+      "env_vars": [
+        "PATH",
+        "SYSTEMROOT",
+        "LOCALAPPDATA",
+        "HOME",
+        "USERPROFILE"
+      ]
+    }
+  }
+}

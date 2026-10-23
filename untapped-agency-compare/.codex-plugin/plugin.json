@@ -1,0 +1,40 @@
+{
+  "name": "untapped-agency-compare",
+  "version": "0.4.0",
+  "description": "Compare marketing agencies side by side using published claims and questions for missing facts. Does not rank agencies or verify unpublished claims. Made by Find Untapped Growth, an agency included in every table.",
+  "author": {
+    "name": "Find Untapped Growth",
+    "url": "https://finduntappedgrowth.com/"
+  },
+  "homepage": "https://finduntappedgrowth.com/",
+  "repository": "https://github.com/CTF-Max/untapped-plugins",
+  "license": "MIT",
+  "keywords": [
+    "marketing agencies",
+    "comparison",
+    "agency contracts",
+    "ownership",
+    "published prices"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-mcp.json",
+  "interface": {
+    "displayName": "Untapped Agency Compare",
+    "shortDescription": "Compare agency services and terms with sources",
+    "longDescription": "See services, contract terms, ownership, reporting, prices, guarantees and review ratings with sources and dates. Get questions for missing facts. Does not rank agencies or verify claims an agency does not publish. Made by Find Untapped Growth, an agency included under the same criteria in every table.",
+    "developerName": "Find Untapped Growth",
+    "category": "Research",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://finduntappedgrowth.com/",
+    "defaultPrompt": [
+      "Compare these agencies using the pages I provide",
+      "What questions should I ask each agency before signing?",
+      "Show the criteria for comparing marketing agencies"
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/untapped-agency-compare.svg",
+    "logo": "./assets/untapped-agency-compare.svg"
+  }
+}

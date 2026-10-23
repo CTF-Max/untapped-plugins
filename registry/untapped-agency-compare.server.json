@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.CTF-Max/untapped-agency-compare",
+  "title": "Untapped Agency Compare",
+  "description": "Compare agency services and terms with sources",
+  "version": "0.4.0",
+  "websiteUrl": "https://github.com/CTF-Max/untapped-plugins/tree/main/untapped-agency-compare#readme",
+  "repository": {
+    "url": "https://github.com/CTF-Max/untapped-plugins",
+    "source": "github",
+    "subfolder": "untapped-agency-compare"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/CTF-Max/untapped-plugins/releases/download/v0.4.0/untapped-agency-compare-mcp-0.4.0.mcpb",
+      "version": "0.4.0",
+      "fileSha256": "605bcd394566b730f06adc4e6adfbc1344603d80f43cae7b126afa7803f5e8f8",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

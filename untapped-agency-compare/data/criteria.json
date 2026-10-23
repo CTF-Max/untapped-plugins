@@ -1,0 +1,14 @@
+[
+  {"id":"services","label":"Services","meaning":"The work the agency explicitly says it offers, with exclusions and conditions intact.","question":"Which services and deliverables are included, and which cost extra?"},
+  {"id":"contract","label":"Contract length","meaning":"Published minimum commitment or renewal term.","question":"What is the minimum contract term and how does renewal work?"},
+  {"id":"cancellation","label":"Cancellation","meaning":"Published notice period, exit charges and termination conditions.","question":"How can I cancel, how much notice is required, and what exit charges apply?"},
+  {"id":"domain_ownership","label":"Domain ownership","meaning":"Who owns and controls the domain during the engagement and after exit.","question":"Who owns my domain and controls its registrar account, including after cancellation?"},
+  {"id":"site_ownership","label":"Website ownership","meaning":"Who owns the website and what can be transferred on exit.","question":"Who owns my website and can I take its files, content and hosting access when I leave?"},
+  {"id":"profile_ownership","label":"Profile ownership","meaning":"Who owns and controls the business profile, including after exit.","question":"Who is the primary owner of my business profile and will I keep full access when I leave?"},
+  {"id":"ad_account_ownership","label":"Ad account ownership","meaning":"Who owns the advertising accounts and keeps their history on exit.","question":"Who owns my ad accounts, and do I retain access and campaign history when I leave?"},
+  {"id":"reporting_cadence","label":"Reporting cadence","meaning":"How often the agency explicitly says it provides reports.","question":"How often will I receive a report on the work and results?"},
+  {"id":"reporting_format","label":"Reporting format","meaning":"The stated report format or delivery method.","question":"Can you show a sample report and explain how it will be delivered?"},
+  {"id":"prices","label":"Published prices","meaning":"Quoted prices, currency, period, setup fees and conditions; requests for a quote are not a numeric price.","question":"What are the total fees, billing period, setup charges and separate advertising costs?"},
+  {"id":"guarantees","label":"Guarantees","meaning":"Exact published promises, exclusions, refund terms or statements that no guarantee is made.","question":"What, if anything, is guaranteed, under which conditions, and what remedy applies?"},
+  {"id":"reviews","label":"Reviews","meaning":"Only a numeric rating out of 5 and count together, with the source URL and date read; never review prose.","question":"Where can I see your current rating and review count on the original review profile?"}
+]
