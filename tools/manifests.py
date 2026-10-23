@@ -40,13 +40,14 @@ PLUGINS = [
                     "Show the criteria for comparing marketing agencies"],
     },
     {
-        "name": "untapped-resume", "version": "0.3.0", "server": "server/resume_server.py", "category": "Productivity",
+        "name": "untapped-resume", "version": "0.3.1", "server": "server/resume_server.py", "category": "Productivity",
         "display": "Untapped Resume", "short": "Tailor a resume and portfolio to one job, with evidence",
         "description": "Build a source-backed resume, portfolio and LinkedIn kit for one job from local evidence. "
-                       "Free. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
+                       "Free. Adds no ads, links or credit lines to your documents. Cannot post to LinkedIn; paste + upload "
+                       "takes about 2 minutes. Does not guarantee interviews.",
         "long": "Reads your project files, git history, old resumes and LinkedIn export locally. Helps your agent "
                 "match one job, write a plain resume and portfolio, and prepare a LinkedIn kit, cover letter and "
-                "gap plan. Missing evidence stays missing. Cannot post to LinkedIn; paste + upload takes about "
+                "gap plan. Missing evidence stays missing. Your documents carry no ads, links or credit line for us or anyone else. Cannot post to LinkedIn; paste + upload takes about "
                 "2 minutes. Does not guarantee interviews.",
         "keywords": ["resume", "portfolio", "linkedin", "job application", "evidence", "career"],
         "env": [],

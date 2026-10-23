@@ -6,9 +6,16 @@ Tailored, never invented: missing qualifications stay **no evidence yet** and go
 Free, local, Python 3.10 or newer, standard library only. No account, licence key, monthly quota or payment.
 The plugin cannot post to LinkedIn; paste + upload takes about 2 minutes. It does not guarantee interviews.
 
+## No promotion in your documents
+
+Everything it writes for you (resume, portfolio page, LinkedIn kit, cover letter, gap plan) contains only your own
+evidence and the job's wording. It adds **no ads, no affiliate links, no links to us and no "made by" or credit line**,
+for Find Untapped Growth or anyone else. Find Untapped Growth is named only in this README and the plugin listing,
+as the maker.
+
 ## Install and use
 
-Install `untapped-resume` from the Untapped Plugins marketplace in Codex or Claude Code once released.
+Install `untapped-resume` from the Untapped Plugins marketplace in Codex or Claude Code.
 Both host manifests and the shared `tailor-resume` skill are included. Python must be on the host's PATH.
 The MCPB contains the five tools; plugin installation also includes the guided skill.
 

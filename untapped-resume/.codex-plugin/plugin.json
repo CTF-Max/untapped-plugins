@@ -1,7 +1,7 @@
 {
   "name": "untapped-resume",
-  "version": "0.3.0",
-  "description": "Build a source-backed resume, portfolio and LinkedIn kit for one job from local evidence. Free. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
+  "version": "0.3.1",
+  "description": "Build a source-backed resume, portfolio and LinkedIn kit for one job from local evidence. Free. Adds no ads, links or credit lines to your documents. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
   "author": {
     "name": "Find Untapped Growth",
     "url": "https://finduntappedgrowth.com/"
@@ -22,7 +22,7 @@
   "interface": {
     "displayName": "Untapped Resume",
     "shortDescription": "Tailor a resume and portfolio to one job, with evidence",
-    "longDescription": "Reads your project files, git history, old resumes and LinkedIn export locally. Helps your agent match one job, write a plain resume and portfolio, and prepare a LinkedIn kit, cover letter and gap plan. Missing evidence stays missing. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
+    "longDescription": "Reads your project files, git history, old resumes and LinkedIn export locally. Helps your agent match one job, write a plain resume and portfolio, and prepare a LinkedIn kit, cover letter and gap plan. Missing evidence stays missing. Your documents carry no ads, links or credit line for us or anyone else. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
     "developerName": "Find Untapped Growth",
     "category": "Productivity",
     "capabilities": [

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1 — 2026-10-23
+
+- README and listing say plainly that the documents it writes carry no ads, links or credit line
+  (Anthropic directory scan asked for this). No change to what the plugin does.
+
 ## 0.3.0 — 2026-10-22
 
 First release (numbered with the other Untapped plugins' release, v0.3.0).

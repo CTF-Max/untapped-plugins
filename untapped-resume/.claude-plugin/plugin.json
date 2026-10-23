@@ -1,8 +1,8 @@
 {
   "name": "untapped-resume",
   "displayName": "Untapped Resume",
-  "version": "0.3.0",
-  "description": "Build a source-backed resume, portfolio and LinkedIn kit for one job from local evidence. Free. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
+  "version": "0.3.1",
+  "description": "Build a source-backed resume, portfolio and LinkedIn kit for one job from local evidence. Free. Adds no ads, links or credit lines to your documents. Cannot post to LinkedIn; paste + upload takes about 2 minutes. Does not guarantee interviews.",
   "author": {
     "name": "Find Untapped Growth",
     "url": "https://finduntappedgrowth.com/"
